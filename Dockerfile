@@ -1,4 +1,5 @@
 FROM node:20-alpine
+LABEL org.opencontainers.image.source https://github.com/BYBE-INC/prerender-alpine
 
 ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV CHROME_PATH=/usr/lib/chromium/
