@@ -1,11 +1,12 @@
 version: '3'
 services:
-    prerender:
-        image: tvanro/prerender-alpine
-        ports:
-        - 3000:3000
-        environment:
-        - MEMORY_CACHE=0
-        - CACHE_MAXSIZE=1000
-        - CACHE_TTL=6000
-        restart: unless-stopped
+  prerender:
+    image: ghcr.io/bybe-inc/prerender-alpine:latest
+    build:
+      context: .
+    ports:
+      - 3010:3000
+    environment:
+      - MEMORY_CACHE=0
+      - CACHE_MAXSIZE=1000
+      - CACHE_TTL=6000
